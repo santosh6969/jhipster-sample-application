@@ -46,21 +46,4 @@ node {
         sh "./mvnw verify -Pprod -DskipTests"
         archiveArtifacts artifacts: '**/target/*.war', fingerprint: true
     }
-    
-    stage('Docker Build') {
-      agent any
-      steps {
-        sh 'docker build -t jhipster/jhipster-sample-application:latest .'
-     }
-    }
-    
-    stage('Docker Push') {
-      agent any
-      steps {
-        withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'Santosh@1234', usernameVariable: 'srmhetre69')]) {
-          sh "docker login -u srmhetre69 -p Santosh@1234"
-          sh 'docker push jhipster/jhipster-sample-application:latest'
-        }
-      }
-    }    
 }
