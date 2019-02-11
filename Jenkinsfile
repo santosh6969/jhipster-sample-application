@@ -43,7 +43,7 @@ node {
     }
 
     stage('packaging') {
-        sh "./mvnw verify -Pprod -DskipTests dockerfile:build"
+        sh "./mvnw verify -Pprod -DskipTests jib:build -Djib.to.auth.username=srmhetre69 -Djib.to.auth.password=Santosh@1234"
         archiveArtifacts artifacts: '**/target/*.war', fingerprint: true
     }
 }
