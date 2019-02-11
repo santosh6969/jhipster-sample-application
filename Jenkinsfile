@@ -43,7 +43,7 @@ node {
     }
 
     stage('packaging') {
-        sh "./mvnw verify -Pprod -DskipTests"
+        sh "./mvnw verify -Pprod -DskipTests dockerfile:build"
         archiveArtifacts artifacts: '**/target/*.war', fingerprint: true
     }
 }
