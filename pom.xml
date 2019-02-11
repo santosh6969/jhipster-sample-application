@@ -468,8 +468,8 @@
                       <from>
                           <image>openjdk:8-jre-alpine</image>
                       </from>
-                      <to>
-                          <image>jhipstersampleapplication:latest</image>
+                       <to>
+                        <image>registry.hub.docker.com/srmhetre69/jhipster-sample-application</image>
                       </to>
                       <container>
                           <entrypoint>
