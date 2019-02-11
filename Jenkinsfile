@@ -62,4 +62,5 @@ node {
           sh 'docker push jhipster/jhipster-sample-application:latest'
         }
       }
+    }    
 }
